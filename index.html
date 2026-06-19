@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 轻量陪伴与沉浸体验</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #2d3a4a;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* 卡片风格 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e6eaee;
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.03);
+      padding: 2rem 2.2rem;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .card + .card {
+      margin-top: 2rem;
+    }
+
+    /* hero 区域 */
+    .hero {
+      background: linear-gradient(145deg, #ffffff, #f7f9fc);
+      border: 1px solid #e6eaee;
+      border-radius: 28px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
+      padding: 3.2rem 2.4rem;
+      margin-bottom: 2.2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      color: #1e2b39;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      color: #5c6f84;
+      max-width: 640px;
+      margin: 0.3rem auto 0;
+      line-height: 1.5;
+    }
+
+    /* 标题 */
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #1f2c3b;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #98a9bc;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #263544;
+      margin: 0 0 0.6rem 0;
+    }
+
+    /* 网格 / 特点区 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .feature-item {
+      background: #fafcfe;
+      border-radius: 16px;
+      padding: 1.2rem 1.2rem 1.4rem;
+      border: 1px solid #e3e8ee;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #435566;
+    }
+
+    .badge-soft {
+      display: inline-block;
+      background: #eef2f7;
+      padding: 0.15rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #3a4b5e;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* 说明区 / 段落 */
+    .desc-block p {
+      margin-bottom: 1rem;
+      max-width: 780px;
+    }
+
+    .desc-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inline-link {
+      color: #2b5f7a;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #2b5f7a;
+    }
+
+    /* FAQ */
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #eaeff3;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1b2a38;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      color: #4c6075;
+      font-size: 0.95rem;
+    }
+
+    /* 底部 */
+    .footer-note {
+      margin-top: 2.8rem;
+      padding: 1.8rem 0 0.2rem;
+      text-align: center;
+      border-top: 1px solid #dde2e8;
+      font-size: 0.9rem;
+      color: #5b6d7f;
+    }
+
+    .footer-note a {
+      color: #2b5f7a;
+      text-decoration: none;
+      font-weight: 450;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.6rem;
+      }
+
+      .hero {
+        padding: 2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .card {
+        padding: 1.5rem 1rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        padding-left: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 自在漫游</h1>
+    <div class="sub">在虚构与放松之间找到属于自己的节奏，每一次打开都是一段轻盈陪伴。</div>
+  </div>
+
+  <!-- 优势区 -->
+  <div class="card">
+    <h2>为什么许多玩家重新回到这里</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="badge-soft">轻量 · 低门槛</span>
+        <p>无需复杂配置，页面加载迅速，从点击到进入只需两次呼吸。适合碎片时间放松，也适合长时间沉浸。</p>
+      </div>
+      <div class="feature-item">
+        <span class="badge-soft">安静 · 无干扰</span>
+        <p>没有弹窗横幅，没有冗余信息流。界面干净，让注意力停留在内容本身，而非被引导离开。</p>
+      </div>
+      <div class="feature-item">
+        <span class="badge-soft">持续 · 有温度</span>
+        <p>运营团队保持稳定的更新节奏，不追逐热点，只打磨体验。每次回来都有熟悉感，偶尔也有小惊喜。</p>
+      </div>
+      <div class="feature-item">
+        <span class="badge-soft">社区 · 可对话</span>
+        <p>留言区与反馈通道保持开放，玩家之间可以温和交流，没有戾气和过度竞争的氛围。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 说明区：从“主题内容”展开 -->
+  <div class="card desc-block">
+    <h2>从「轻陪伴」到「小沉浸」</h2>
+    <p>
+      很多人最初只是为了打发几分钟无聊，后来发现了一个更从容的角落。在<a href="https://ayxwebs.com" class="inline-link">爱游戏</a>，你找不到夸张的排行或紧迫的任务，取而代之的是经过挑选的互动内容：短篇叙事、策略解谜、休闲建造……每种体验都保留了足够的留白，让你按自己的步调探索。
+    </p>
+    <p>
+      我们相信数字娱乐的核心不是消耗时间，而是提供一段有温度的精神间歇。无论是午休前的十指放松，还是睡前的一章故事，每一次选择都应该发自内心，而非被算法催促。
+    </p>
+    <p>
+      因此这里的页面逻辑很简单：你决定开始，你决定停下，中间没有强制目标。这种克制反而让体验变得真诚，像一本可以反复翻阅的纸质书。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 + 底部链接融合 -->
+  <div class="card">
+    <h2>一些你可能想知道的事</h2>
+    <div class="faq-item">
+      <div class="faq-q">适合完全不会玩游戏的人吗？</div>
+      <div class="faq-a">当然。大部分内容没有复杂操作，更看重选择和阅读。如果你愿意，可以像翻一本互动杂志那样使用。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">是否需要注册或留下个人信息？</div>
+      <div class="faq-a">大部分浏览和体验都不需要注册。某些社区互动功能会提供自愿选项，但绝不强制绑定。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">内容更新频率如何？</div>
+      <div class="faq-a">保持每周 2~3 次有质量的更新。团队更看重内容的可重玩性，而非单纯增加数量。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">想了解更多关于这个项目的理念？</div>
+      <div class="faq-a">可以随时逛逛 <a href="https://ayxwebs.com" class="inline-link">爱游戏</a>，页面底部和关于页有更详细的说明。我们也会在 FAQ 区持续补充。</div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer-note">
+    <p>© 爱游戏 · 一个专注于轻松体验的小型数字空间 · <a href="https://ayxwebs.com">爱游戏</a></p>
+    <p style="margin-top: 0.6rem; font-size: 0.8rem; color: #7b8c9d;">无诱导 · 无排名 · 纯粹陪伴</p>
+  </div>
+
+</div>
+
+</body>
+</html>
